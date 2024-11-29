@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import pic from "../assets/lockedbox-removebg-preview.png";
 const Header = () => {
   const navs = [
     { id: 1, path: "/save", title: "Save" },
@@ -11,10 +11,14 @@ const Header = () => {
   ];
   return (
     <div>
-      <div className="w-full h-[80px] bg-inherit flex justify-center fixed">
-        <div className="w-[80%] h-full  bg-slate-100 flex justify-between">
+      <div className="w-full h-[80px]  flex justify-center fixed backdrop-blur z-10">
+        <div className="w-[80%] h-full   flex justify-between">
           <div className="w-[60%] h-full flex justify-between">
-            <div className="w-[20%] h-full">logo</div>
+            <Link to={"/"}>
+              <div className="w-[50%] h-full flex items-center">
+                <img src={pic} alt="img" className="" />
+              </div>
+            </Link>
             <div className="w-[60%] h-full flex gap-5 items-center">
               {navs.map((el) => (
                 <Link to={el.path}>{el.title}</Link>
