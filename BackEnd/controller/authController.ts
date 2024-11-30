@@ -3,8 +3,8 @@ import bcrypt from "bcrypt";
 import crypto from "crypto";
 import authModel from "../model/authModel";
 import jwt from "jsonwebtoken";
+import { sendCreateAccountEmail } from "../utils/email";
 import cloudinary from "../utils/cloudinary";
-
 //AUTH
 export const createUser = async (req: Request, res: Response) => {
   try {
@@ -30,6 +30,9 @@ export const loginUser = async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body;
     const getUser = await authModel.findOne({ email });
+    sendCreateAccountEmail().then(() => {
+      console.log("running");
+    });
 
     if (getUser) {
       const passwordCheck = await bcrypt.compare(password, getUser.password);
