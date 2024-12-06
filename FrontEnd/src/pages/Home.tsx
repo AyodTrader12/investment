@@ -115,7 +115,7 @@ const Home = () => {
             <button className="w-[300px] bg-blue-600 h-[45px] text-white rounded-3xl font-semibold hover:bg-slate-950 transition-all duration-300 mt-28">
               The 2024 LockBox Savings Report
             </button>
-            <h1 className="font-bold text-[40px] mb-5">
+            <h1 className="font-bold text-[50px] mb-5">
               The Better Way to
               <br />
               Save & Invest
@@ -127,11 +127,11 @@ const Home = () => {
             </p>
             <div className="flex gap-5">
               <div className="w-[35%] h-[40px] text-white rounded-lg bg-slate-900 flex gap-1 items-center font-semibold hover:bg-black cursor-pointer">
-                <img src={pix1} alt="img" className="w-[20%] h-[70%]" />
+                <img src={pix1} alt="img" className="w-[20%] h-[50%]" />
                 <p>Get it on iphone</p>
               </div>
               <div className="w-[35%] h-[40px] text-white rounded-lg bg-slate-900 flex gap-1 items-center font-semibold hover:bg-black cursor-pointer ">
-                <img src={pix} alt="img" className="w-[20%] h-[70 %] ml-1" />
+                <img src={pix} alt="img" className="w-[20%] h-[50 %] ml-1" />
                 <p>Get on Android</p>
               </div>
             </div>
